@@ -505,6 +505,33 @@ void LRandom::wrapForLua (lua_State *L)
 	];
 }
 
+void LNormalisableRange::wrapForLua(lua_State* L)
+{
+	using namespace luabind;
+
+
+	module(L)[
+		class_<NormalisableRange<float>::ValueRemapFunction>("ValueRemapFunction")
+	];
+
+	// Bind the NormalisableRange class
+	module(L)[
+		class_<NormalisableRange<float>>("NormalisableRange")
+			.def(constructor<>())
+			.def(constructor<float, float, float, float, bool>())
+			.def("convertTo0to1", &NormalisableRange<float>::convertTo0to1)
+			.def("convertFrom0to1", &NormalisableRange<float>::convertFrom0to1)
+			.def("snapToLegalValue", &NormalisableRange<float>::snapToLegalValue)
+			.def("getRange", &NormalisableRange<float>::getRange)
+			.def("setSkewForCentre", &NormalisableRange<float>::setSkewForCentre)
+			.def_readwrite("rangeStart", &NormalisableRange<float>::start)
+			.def_readwrite("rangeEnd", &NormalisableRange<float>::end)
+			.def_readwrite("interval", &NormalisableRange<float>::interval)
+			.def_readwrite("skew", &NormalisableRange<float>::skew)
+			.def_readwrite("symmetricSkew", &NormalisableRange<float>::symmetricSkew)
+	];
+}
+
 void LRange::wrapForLua (lua_State *L)
 {
 	using namespace luabind;

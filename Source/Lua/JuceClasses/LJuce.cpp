@@ -22,6 +22,7 @@ void CtrlrLuaManager::wrapJuceCoreClasses(lua_State *L)
 	LZipFile::wrapForLua(L);
 	LMemoryInputStream::wrapForLua(L);
 	LInputStream::wrapForLua(L);
+	LNormalisableRange::wrapForLua(L);
 	LRange::wrapForLua(L);
 	LSparseSet::wrapForLua(L);
 	LAudioFile::wrapForLua(L);

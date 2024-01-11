@@ -46,6 +46,7 @@
 #include "LFont.h"
 #include "LBubbleMessageComponent.h"
 #include "LAttributedString.h"
+#include "LNormalisableRange.h"
 #include "LRange.h"
 #include "LComponentPeer.h"
 #include "LGlyphArrangement.h"

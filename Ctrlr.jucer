@@ -459,6 +459,8 @@
           <FILE id="Eom0Rf" name="LModifierKeys.h" compile="0" resource="0" file="Source/Lua/JuceClasses/LModifierKeys.h"/>
           <FILE id="kK1oc3" name="LMouseCursor.h" compile="0" resource="0" file="Source/Lua/JuceClasses/LMouseCursor.h"/>
           <FILE id="U2dUjC" name="LMouseEvent.h" compile="0" resource="0" file="Source/Lua/JuceClasses/LMouseEvent.h"/>
+          <FILE id="j6B02Y" name="LNormalisableRange.h" compile="0" resource="0"
+                file="Source/Lua/JuceClasses/LNormalisableRange.h"/>
           <FILE id="TcCoRB" name="LPath.h" compile="0" resource="0" file="Source/Lua/JuceClasses/LPath.h"/>
           <FILE id="Uj0e4s" name="LPoint.h" compile="0" resource="0" file="Source/Lua/JuceClasses/LPoint.h"/>
           <FILE id="P4G1qS" name="LPopupMenu.h" compile="0" resource="0" file="Source/Lua/JuceClasses/LPopupMenu.h"/>
