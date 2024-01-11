@@ -289,6 +289,7 @@ void LGlobalFunctions::wrapForLua (lua_State *L)
 		def("jmin", (double (*) (const double, const double))&juce::jmin<double>),
 		def("jmin", (double (*) (const double, const double, const double))&juce::jmin<double>),
 		def("jmin", (double (*) (const double, const double, const double, const double))&juce::jmin<double>),
+		def("jmap", (double (*) (const double, const double, const double, const double, const double))&juce::jmap<double>),
 		def("jlimit", (double (*) (const double, const double, const double))&juce::jlimit<double>),
 		def("isPositiveAndBelow", (bool (*) (const double, const double))&juce::isPositiveAndBelow<double>),
 		def("isPositiveAndNotGreaterThan", (bool (*) (const double, const double))&juce::isPositiveAndNotGreaterThan<double>),
