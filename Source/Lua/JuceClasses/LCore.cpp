@@ -283,6 +283,10 @@ void LGlobalFunctions::wrapForLua (lua_State *L)
                 def("getNativeObject", &CtrlrNative::getNativeObject)
             ]
 		,
+
+		def("degreesToRadians", (float (*) (const float))&juce::degreesToRadians<float>),
+		def("radiansToDegrees", (float (*) (const float)) & juce::radiansToDegrees<float>),
+				
 		def("jmax", (double (*) (const double, const double))&juce::jmax<double>),
 		def("jmax", (double (*) (const double, const double, const double))&juce::jmax<double>),
 		def("jmax", (double (*) (const double, const double, const double, const double))&juce::jmax<double>),
@@ -293,6 +297,7 @@ void LGlobalFunctions::wrapForLua (lua_State *L)
 		def("jlimit", (double (*) (const double, const double, const double))&juce::jlimit<double>),
 		def("isPositiveAndBelow", (bool (*) (const double, const double))&juce::isPositiveAndBelow<double>),
 		def("isPositiveAndNotGreaterThan", (bool (*) (const double, const double))&juce::isPositiveAndNotGreaterThan<double>),
+		def("isWithin", (bool (*) (const double, const double, const double))&juce::isWithin<double>),
         def("roundToInt", &juce::roundToInt<double>),
 		def("roundToIntAccurate", &juce::roundToIntAccurate),
 		def("roundDoubleToInt", &juce::roundDoubleToInt),
